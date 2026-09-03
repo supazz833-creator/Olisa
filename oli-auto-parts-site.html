@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Olis Auto Parts — Nippon Piston Rings, Shipped Worldwide</title>
+<meta name="description" content="Genuine Nippon piston rings exported from the USA to Nigeria and worldwide. Precision fitment for popular Nigerian and American car models.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --red: #7A2020;
+  --red-dark: #4A1414;
+  --red-deep: #2E0D0D;
+  --cream: #F6F1E7;
+  --cream-dim: #EBE2CE;
+  --charcoal: #211C18;
+  --gold: #B8863B;
+  --gold-light: #D9AE6E;
+  --gold-pale: #EFDDB8;
+  --ink: #2A2320;
+  --line: rgba(42,35,32,0.14);
+  --font-head: 'Barlow Condensed', sans-serif;
+  --font-body: 'Source Sans 3', sans-serif;
+  --font-mono: 'Roboto Mono', monospace;
+  --radius: 3px;
+  --wrap: 1180px;
+}
+
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  font-family:var(--font-body);
+  background:var(--cream);
+  color:var(--ink);
+  line-height:1.55;
+}
+h1,h2,h3,h4{
+  font-family:var(--font-head);
+  font-weight:600;
+  letter-spacing:0.01em;
+  margin:0 0 0.4em;
+  color:var(--red-deep);
+}
+p{margin:0 0 1em;}
+a{color:inherit;}
+.wrap{max-width:var(--wrap); margin:0 auto; padding:0 24px;}
+img{max-width:100%; display:block;}
+button{font-family:inherit;}
+
+.eyebrow{
+  font-family:var(--font-mono);
+  font-size:0.78rem;
+  color:var(--gold);
+  letter-spacing:0.04em;
+  margin-bottom:0.6em;
+}
+
+/* Buttons */
+.btn{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:13px 26px;
+  border-radius:var(--radius);
+  font-weight:600;
+  text-decoration:none;
+  border:1.5px solid transparent;
+  cursor:pointer;
+  font-size:0.98rem;
+  transition:transform .15s ease, background .15s ease;
+}
+.btn-primary{background:var(--red); color:var(--cream);}
+.btn-primary:hover{background:var(--red-dark);}
+.btn-ghost{border-color:var(--red); color:var(--red-deep); background:transparent;}
+.btn-ghost:hover{background:rgba(122,32,32,0.08);}
+.btn-whatsapp{background:#25763f; color:#fff; margin-top:18px;}
+.btn-whatsapp svg{width:20px; height:20px;}
+.btn-block{width:100%; justify-content:center;}
+
+/* Header */
+.site-header{
+  position:sticky; top:0; z-index:50;
+  background:var(--charcoal);
+  border-bottom:3px solid var(--gold);
+}
+.header-row{
+  display:flex; align-items:center; justify-content:space-between;
+  height:74px;
+}
+.brand{display:flex; align-items:center; gap:10px; text-decoration:none; color:var(--cream);}
+.brand-mark{width:30px; height:30px; color:var(--gold-light);}
+.brand-mark svg{width:100%; height:100%;}
+.brand-text{font-family:var(--font-head); font-size:1.5rem; letter-spacing:0.01em;}
+.brand-text em{font-style:normal; color:var(--gold-light);}
+.main-nav{display:flex; gap:28px;}
+.main-nav a{color:var(--cream-dim); text-decoration:none; font-size:0.96rem; font-weight:500;}
+.main-nav a:hover{color:var(--gold-light);}
+.header-actions{display:flex; align-items:center; gap:14px;}
+.icon-btn{
+  position:relative; background:none; border:none; color:var(--cream); cursor:pointer;
+  width:34px; height:34px; display:flex; align-items:center; justify-content:center;
+}
+.icon-btn svg{width:24px; height:24px;}
+.cart-count{
+  position:absolute; top:-4px; right:-6px;
+  background:var(--gold); color:var(--red-deep);
+  font-size:0.68rem; font-weight:700;
+  min-width:17px; height:17px; border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  font-family:var(--font-mono);
+}
+.nav-toggle{display:none; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer; padding:6px;}
+.nav-toggle span{width:22px; height:2px; background:var(--cream);}
+
+/* Hero */
+.hero{position:relative; overflow:hidden; padding:90px 0 70px; background:linear-gradient(180deg, var(--charcoal), var(--red-deep) 140%);}
+.hero-rings{position:absolute; right:-140px; top:50%; transform:translateY(-50%); width:640px; height:640px; opacity:0.35; color:var(--gold);}
+.hero-rings svg{width:100%; height:100%;}
+.hero-rings circle{fill:none; stroke:currentColor; stroke-width:1.4;}
+.hero-row{position:relative; z-index:1;}
+.hero-copy{max-width:620px; color:var(--cream);}
+.hero-copy h1{color:var(--cream); font-size:clamp(2.1rem, 4.2vw, 3.1rem); line-height:1.08;}
+.hero-sub{color:var(--cream-dim); font-size:1.05rem; max-width:540px;}
+.hero-cta{display:flex; gap:14px; flex-wrap:wrap; margin:26px 0 44px;}
+.hero-cta .btn-ghost{border-color:var(--gold-light); color:var(--gold-pale);}
+.hero-cta .btn-ghost:hover{background:rgba(217,174,110,0.12);}
+.hero-stats{display:flex; gap:42px; margin:0; padding-top:24px; border-top:1px solid rgba(246,241,231,0.18);}
+.hero-stats dt{font-family:var(--font-mono); font-size:0.72rem; color:var(--gold-light); margin-bottom:4px;}
+.hero-stats dd{margin:0; font-family:var(--font-head); font-size:1.5rem; color:var(--cream);}
+
+/* Shop sections */
+.shop-section{padding:74px 0;}
+.shop-section.alt{background:var(--cream-dim);}
+.section-head{max-width:560px; margin-bottom:32px;}
+.section-head h2{font-size:clamp(1.7rem,3vw,2.3rem);}
+.section-head p{color:#5c5148;}
+
+.filter-bar{display:flex; gap:12px; flex-wrap:wrap; margin-bottom:28px;}
+.filter-search, .filter-select{
+  font-family:var(--font-body); font-size:0.95rem;
+  padding:10px 14px; border:1.5px solid var(--line); border-radius:var(--radius);
+  background:#fff; color:var(--ink);
+}
+.filter-search{flex:1; min-width:200px;}
+
+.product-grid{
+  display:grid; grid-template-columns:repeat(auto-fill, minmax(270px,1fr)); gap:22px;
+}
+.product-card{
+  background:#fff; border:1px solid var(--line); border-radius:var(--radius);
+  padding:20px; display:flex; flex-direction:column; gap:10px;
+  cursor:pointer; transition:box-shadow .15s ease, transform .15s ease;
+}
+.product-card:hover{box-shadow:0 10px 26px rgba(46,13,13,0.1); transform:translateY(-2px);}
+.card-top{display:flex; justify-content:space-between; align-items:flex-start; gap:10px;}
+.card-make{font-family:var(--font-mono); font-size:0.72rem; color:var(--gold); text-transform:uppercase; letter-spacing:0.03em;}
+.card-title{font-family:var(--font-head); font-size:1.3rem; color:var(--red-deep); line-height:1.15;}
+.stock-pill{
+  font-family:var(--font-mono); font-size:0.68rem; padding:3px 8px; border-radius:20px;
+  white-space:nowrap; height:fit-content;
+}
+.stock-in{background:#E4EFE0; color:#2E6B2E;}
+.stock-low{background:#F7E9D2; color:#8A5A12;}
+.stock-out{background:#F3E0DC; color:#8A2E20;}
+.mini-add:disabled{background:#c9beb2; cursor:not-allowed;}
+.card-specs{font-family:var(--font-mono); font-size:0.82rem; color:#5c5148; display:flex; flex-direction:column; gap:2px;}
+.card-bottom{display:flex; justify-content:space-between; align-items:center; margin-top:auto; padding-top:8px; border-top:1px dashed var(--line);}
+.card-price{font-family:var(--font-head); font-size:1.3rem; color:var(--red);}
+.card-price .ngn{display:block; font-family:var(--font-mono); font-size:0.7rem; color:#8a7d6d; font-weight:400;}
+.mini-add{
+  background:var(--red); color:#fff; border:none; border-radius:var(--radius);
+  padding:8px 14px; font-weight:600; font-size:0.85rem; cursor:pointer;
+}
+.mini-add:hover{background:var(--red-dark);}
+.no-results{color:#8a7d6d; padding:20px 0;}
+
+/* Shipping */
+.shipping-section{padding:70px 0; background:var(--charcoal); color:var(--cream);}
+.shipping-row{display:flex; gap:50px; flex-wrap:wrap; align-items:center; justify-content:space-between;}
+.shipping-copy{max-width:480px;}
+.shipping-copy h2{color:var(--cream); font-size:clamp(1.6rem,3vw,2.1rem);}
+.shipping-copy p{color:var(--cream-dim);}
+.shipping-calc{background:rgba(246,241,231,0.06); border:1px solid rgba(246,241,231,0.18); border-radius:var(--radius); padding:26px; min-width:300px;}
+.shipping-calc label{display:block; font-family:var(--font-mono); font-size:0.75rem; color:var(--gold-light); margin-bottom:8px;}
+.shipping-calc select{width:100%; padding:11px 12px; border-radius:var(--radius); border:1px solid rgba(246,241,231,0.3); background:var(--red-deep); color:var(--cream); font-size:0.95rem;}
+.shipping-result{margin-top:20px; padding-top:18px; border-top:1px solid rgba(246,241,231,0.18);}
+.shipping-result .ship-cost{font-family:var(--font-head); font-size:2rem; color:var(--gold-light);}
+.shipping-result .ship-eta{font-family:var(--font-mono); font-size:0.82rem; color:var(--cream-dim);}
+
+/* Currency converter */
+.converter-section{padding:70px 0; background:var(--cream-dim);}
+.converter-row{display:flex; gap:50px; flex-wrap:wrap; align-items:center; justify-content:space-between;}
+.converter-copy{max-width:440px;}
+.converter-copy h2{font-size:clamp(1.6rem,3vw,2.1rem);}
+.converter-copy p{color:#5c5148;}
+.converter-tool{background:#fff; border:1px solid var(--line); border-radius:var(--radius); padding:26px; min-width:300px; max-width:360px;}
+.converter-tool label{display:block; font-family:var(--font-mono); font-size:0.75rem; color:#8a7d6d; margin-bottom:6px; margin-top:14px;}
+.converter-tool label:first-of-type{margin-top:0;}
+.converter-tool input{width:100%; padding:10px 12px; border:1.5px solid var(--line); border-radius:var(--radius); font-size:0.95rem; font-family:var(--font-body);}
+.converter-tool button{margin-top:18px;}
+.converter-result{margin-top:18px; min-height:20px;}
+.conv-amount{display:block; font-family:var(--font-head); font-size:1.8rem; color:var(--red);}
+.conv-sub{display:block; font-family:var(--font-mono); font-size:0.78rem; color:#8a7d6d; margin-top:2px;}
+.conv-loading{font-family:var(--font-mono); font-size:0.85rem; color:#8a7d6d;}
+.conv-error{font-size:0.85rem; color:var(--red);}
+
+/* Contact status */
+.contact-status{font-size:0.9rem; margin:0; min-height:1.2em;}
+.contact-status.sent{color:#2E6B2E; font-weight:600;}
+.contact-status.error{color:var(--red);}
+
+/* Admin dashboard */
+.admin-login-modal{max-width:360px;}
+.admin-login-modal form{display:flex; flex-direction:column; gap:14px; margin-top:16px;}
+.admin-login-modal label{font-family:var(--font-mono); font-size:0.78rem; color:#5c5148; display:flex; flex-direction:column; gap:6px;}
+.admin-login-modal input{padding:10px 12px; border:1.5px solid var(--line); border-radius:var(--radius); font-size:0.95rem;}
+.admin-drawer-backdrop{position:fixed; inset:0; background:rgba(20,14,12,0.5); z-index:98; display:none;}
+.admin-drawer-backdrop.open{display:block;}
+.admin-drawer{
+  position:fixed; top:0; right:-520px; width:500px; max-width:94vw; height:100%;
+  background:#fff; z-index:99; display:flex; flex-direction:column;
+  transition:right .25s ease; box-shadow:-8px 0 24px rgba(0,0,0,0.15);
+}
+.admin-drawer.open{right:0;}
+.admin-body{flex:1; overflow-y:auto; padding:18px 22px;}
+.admin-note{font-size:0.82rem; color:#8a7d6d; background:var(--cream-dim); padding:10px 12px; border-radius:var(--radius); margin:0 0 16px;}
+.admin-table{width:100%; border-collapse:collapse; font-size:0.85rem;}
+.admin-table th{text-align:left; font-family:var(--font-mono); font-size:0.7rem; color:#8a7d6d; padding:6px 4px; border-bottom:1px solid var(--line);}
+.admin-table td{padding:8px 4px; border-bottom:1px solid var(--line); vertical-align:middle;}
+.admin-table input[type="number"]{width:80px; padding:6px 8px; border:1px solid var(--line); border-radius:3px; font-family:var(--font-mono);}
+.admin-table select{padding:6px 8px; border:1px solid var(--line); border-radius:3px;}
+.admin-model{font-weight:600;}
+.admin-make{font-family:var(--font-mono); font-size:0.7rem; color:var(--gold);}
+.admin-save-row{padding:16px 22px; border-top:1px solid var(--line);}
+.admin-saved-msg{font-size:0.85rem; color:#2E6B2E; font-weight:600; margin-top:10px; min-height:1.2em;}
+
+.reviews-section{padding:74px 0;}
+.reviews-grid{display:grid; grid-template-columns:repeat(auto-fill, minmax(280px,1fr)); gap:22px;}
+.review-card{background:#fff; border:1px solid var(--line); border-radius:var(--radius); padding:22px;}
+.review-stars{color:var(--gold); font-size:0.95rem; margin-bottom:10px; letter-spacing:2px;}
+.review-quote{font-size:0.98rem; color:var(--ink);}
+.review-name{font-family:var(--font-mono); font-size:0.78rem; color:#8a7d6d; margin-top:12px;}
+
+/* Contact */
+.contact-section{padding:74px 0; background:var(--cream-dim);}
+.contact-row{display:flex; gap:60px; flex-wrap:wrap;}
+.contact-copy{flex:1; min-width:280px;}
+.contact-details{list-style:none; padding:0; margin:20px 0 0; display:flex; flex-direction:column; gap:8px;}
+.contact-details a{color:var(--red); text-decoration:none; font-weight:600;}
+.contact-form{flex:1; min-width:280px; background:#fff; border:1px solid var(--line); border-radius:var(--radius); padding:26px; display:flex; flex-direction:column; gap:14px;}
+.contact-form label{font-family:var(--font-mono); font-size:0.75rem; color:#5c5148; display:flex; flex-direction:column; gap:6px;}
+.contact-form input, .contact-form textarea{
+  font-family:var(--font-body); font-size:0.95rem; padding:10px 12px;
+  border:1.5px solid var(--line); border-radius:var(--radius); resize:vertical;
+}
+.form-note{font-size:0.8rem; color:#8a7d6d; margin:0;}
+
+/* Footer */
+.site-footer{background:var(--charcoal); color:var(--cream-dim); padding:26px 0;}
+.footer-row{display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px; font-size:0.85rem;}
+
+/* Modal */
+.modal-backdrop{
+  position:fixed; inset:0; background:rgba(20,14,12,0.55); z-index:100;
+  display:none; align-items:center; justify-content:center; padding:20px;
+}
+.modal-backdrop.open{display:flex;}
+.modal{background:#fff; border-radius:var(--radius); max-width:560px; width:100%; max-height:88vh; overflow-y:auto; position:relative; padding:32px;}
+.modal-close{position:absolute; top:14px; right:14px; background:none; border:none; font-size:1.6rem; line-height:1; cursor:pointer; color:#8a7d6d;}
+.modal-make{font-family:var(--font-mono); font-size:0.75rem; color:var(--gold); text-transform:uppercase;}
+.modal h3{font-size:1.9rem; margin-bottom:4px;}
+.modal-price{font-family:var(--font-head); font-size:1.6rem; color:var(--red); margin:10px 0;}
+.spec-table{width:100%; border-collapse:collapse; margin:16px 0; font-family:var(--font-mono); font-size:0.88rem;}
+.spec-table td{padding:8px 0; border-bottom:1px solid var(--line);}
+.spec-table td:first-child{color:#8a7d6d; width:55%;}
+.spec-table td:last-child{text-align:right; font-weight:600; color:var(--ink);}
+.fitment-note{font-size:0.85rem; color:#8a7d6d; background:var(--cream-dim); padding:12px 14px; border-radius:var(--radius); margin:14px 0;}
+
+/* Cart drawer */
+.drawer-backdrop{position:fixed; inset:0; background:rgba(20,14,12,0.5); z-index:98; display:none;}
+.drawer-backdrop.open{display:block;}
+.cart-drawer{
+  position:fixed; top:0; right:-420px; width:400px; max-width:92vw; height:100%;
+  background:#fff; z-index:99; display:flex; flex-direction:column;
+  transition:right .25s ease; box-shadow:-8px 0 24px rgba(0,0,0,0.15);
+}
+.cart-drawer.open{right:0;}
+.cart-head{display:flex; justify-content:space-between; align-items:center; padding:20px 22px; border-bottom:1px solid var(--line);}
+.cart-head h2{margin:0; font-size:1.5rem;}
+.cart-items{flex:1; overflow-y:auto; padding:16px 22px; display:flex; flex-direction:column; gap:16px;}
+.cart-item{display:flex; gap:12px; border-bottom:1px solid var(--line); padding-bottom:14px;}
+.cart-item-title{font-weight:600; font-size:0.95rem;}
+.cart-item-sub{font-family:var(--font-mono); font-size:0.75rem; color:#8a7d6d;}
+.qty-row{display:flex; align-items:center; gap:8px; margin-top:8px;}
+.qty-btn{width:24px; height:24px; border:1px solid var(--line); background:#fff; border-radius:3px; cursor:pointer; font-size:1rem; line-height:1;}
+.remove-btn{background:none; border:none; color:var(--red); font-size:0.78rem; cursor:pointer; margin-left:auto; text-decoration:underline;}
+.cart-item-price{font-family:var(--font-head); font-size:1.1rem; white-space:nowrap;}
+.cart-empty{color:#8a7d6d; text-align:center; padding:40px 10px;}
+.cart-foot{border-top:1px solid var(--line); padding:20px 22px;}
+.cart-total-row{display:flex; justify-content:space-between; font-family:var(--font-head); font-size:1.25rem; margin-bottom:4px;}
+.cart-currency-note{font-family:var(--font-mono); font-size:0.75rem; color:#8a7d6d; margin:0 0 14px;}
+.cart-note{font-size:0.78rem; color:#8a7d6d; text-align:center; margin:10px 0 0;}
+
+/* Ring loader (brief on-load flourish) */
+.ring-loader{
+  position:fixed; inset:0; background:var(--charcoal); z-index:200;
+  display:flex; align-items:center; justify-content:center;
+  color:var(--gold-light);
+  animation:fadeOut .6s ease forwards; animation-delay:.5s; pointer-events:none;
+}
+.ring-spin{width:64px; height:64px; animation:spin 1s linear infinite;}
+@keyframes spin{to{transform:rotate(360deg);}}
+@keyframes fadeOut{to{opacity:0; visibility:hidden;}}
+
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto;}
+  .ring-spin{animation:none;}
+  .ring-loader{animation:none; opacity:0; visibility:hidden;}
+}
+
+/* Responsive */
+@media (max-width: 860px){
+  .main-nav{
+    position:fixed; top:74px; left:0; right:0; background:var(--charcoal);
+    flex-direction:column; padding:18px 24px; gap:18px;
+    transform:translateY(-130%); transition:transform .2s ease; z-index:49;
+  }
+  .main-nav.open{transform:translateY(0);}
+  .nav-toggle{display:flex;}
+  .hero-rings{display:none;}
+  .hero-stats{gap:26px;}
+}
+@media (max-width: 600px){
+  .cart-drawer{width:100%;}
+}
+
+/* Focus visibility */
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible{
+  outline:2px solid var(--gold); outline-offset:2px;
+}
+
+</style>
+</head>
+<body>
+
+<div class="ring-loader" id="ringLoader" aria-hidden="true">
+  <svg viewBox="0 0 100 100" class="ring-spin"><circle cx="50" cy="50" r="38" fill="none" stroke="currentColor" stroke-width="6" stroke-dasharray="180 60"/></svg>
+</div>
+
+<header class="site-header">
+  <div class="wrap header-row">
+    <a href="#home" class="brand">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="16" fill="none" stroke="currentColor" stroke-width="4"/><circle cx="20" cy="20" r="8" fill="none" stroke="currentColor" stroke-width="3"/></svg>
+      </span>
+      <span class="brand-text">Olis <em>Auto Parts</em></span>
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="#shop-nigeria">Nigerian Market</a>
+      <a href="#shop-american">American Market</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" id="adminToggle" aria-label="Owner sign in" title="Owner sign in">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M5 20c1.2-3.8 4-5.6 7-5.6s5.8 1.8 7 5.6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+      <button class="icon-btn" id="cartToggle" aria-label="Open cart">
+        <svg viewBox="0 0 24 24"><path d="M3 3h2l2.4 12.4a2 2 0 0 0 2 1.6h8.2a2 2 0 0 0 2-1.6L21 8H6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9.5" cy="20.5" r="1.4" fill="currentColor"/><circle cx="17.5" cy="20.5" r="1.4" fill="currentColor"/></svg>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="home">
+
+  <section class="hero">
+    <div class="hero-rings" aria-hidden="true">
+      <svg viewBox="0 0 600 600"><circle cx="300" cy="300" r="260" /><circle cx="300" cy="300" r="200" /><circle cx="300" cy="300" r="140" /></svg>
+    </div>
+    <div class="wrap hero-row">
+      <div class="hero-copy">
+        <p class="eyebrow">USA &rarr; Nigeria &rarr; Worldwide</p>
+        <h1>Piston rings built to Nippon spec, shipped wherever your engine is.</h1>
+        <p class="hero-sub">Olis Auto Parts exports genuine Nippon-spec piston ring sets from the United States, with fitment worked out for the cars people actually drive in Lagos, Abuja, and across America. Order online — we handle delivery to your door.</p>
+        <div class="hero-cta">
+          <a href="#shop-nigeria" class="btn btn-primary">Shop Nigerian-market fitments</a>
+          <a href="#shop-american" class="btn btn-ghost">Shop American-market fitments</a>
+        </div>
+        <dl class="hero-stats">
+          <div><dt>Fitments listed</dt><dd id="statFitments">—</dd></div>
+          <div><dt>Ships to</dt><dd>Worldwide</dd></div>
+          <div><dt>Ring origin</dt><dd>Nippon spec, USA stock</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section class="shop-section" id="shop-nigeria">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Nigerian-market fitments</h2>
+        <p>The models that move on Nigerian roads — from Camry taxis to Hilux workhorses.</p>
+      </div>
+      <div class="filter-bar" data-market="nigeria">
+        <input type="search" class="filter-search" placeholder="Search make or model…" aria-label="Search Nigerian-market fitments">
+        <select class="filter-select" data-filter="make"><option value="">All makes</option></select>
+        <select class="filter-select" data-filter="year"><option value="">All years</option></select>
+      </div>
+      <div class="product-grid" id="grid-nigeria"></div>
+    </div>
+  </section>
+
+  <section class="shop-section alt" id="shop-american">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>American-market fitments</h2>
+        <p>Domestic favorites and daily drivers, from F-150s to Civics.</p>
+      </div>
+      <div class="filter-bar" data-market="american">
+        <input type="search" class="filter-search" placeholder="Search make or model…" aria-label="Search American-market fitments">
+        <select class="filter-select" data-filter="make"><option value="">All makes</option></select>
+        <select class="filter-select" data-filter="year"><option value="">All years</option></select>
+      </div>
+      <div class="product-grid" id="grid-american"></div>
+    </div>
+  </section>
+
+  <section class="shipping-section" id="shipping">
+    <div class="wrap shipping-row">
+      <div class="shipping-copy">
+        <p class="eyebrow">Delivery only</p>
+        <h2>See your shipping cost before you check out</h2>
+        <p>We don't run a storefront — every order ships direct to your address. Pick a destination to see an estimated cost and delivery window.</p>
+      </div>
+      <div class="shipping-calc">
+        <label for="shipCountry">Destination</label>
+        <select id="shipCountry">
+          <option value="us">United States</option>
+          <option value="ng" selected>Nigeria</option>
+          <option value="row">Rest of world</option>
+        </select>
+        <div class="shipping-result" id="shippingResult"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="converter-section" id="converter">
+    <div class="wrap converter-row">
+      <div class="converter-copy">
+        <p class="eyebrow">Price check</p>
+        <h2>See a price in your own currency</h2>
+        <p>Type your country and an amount in USD to get a live conversion.</p>
+      </div>
+      <div class="converter-tool">
+        <label for="convCountry">Your country</label>
+        <input type="text" id="convCountry" placeholder="e.g. Nigeria" value="Nigeria">
+        <label for="convAmount">Amount (USD)</label>
+        <input type="number" id="convAmount" value="60" min="0" step="0.01">
+        <button class="btn btn-primary btn-block" id="convGo">Convert</button>
+        <div class="converter-result" id="convResult"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="reviews-section" id="reviews">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>What buyers say</h2>
+        <p>Real orders, real engines.</p>
+      </div>
+      <div class="reviews-grid" id="reviewsGrid"></div>
+    </div>
+  </section>
+
+  <section class="contact-section" id="contact">
+    <div class="wrap contact-row">
+      <div class="contact-copy">
+        <p class="eyebrow">Get in touch</p>
+        <h2>Not sure which ring set fits your engine?</h2>
+        <p>Send us your car's make, model, year, and engine size, and we'll confirm the right fitment before you order.</p>
+        <ul class="contact-details">
+          <li><strong>Email</strong> <a href="mailto:olisautoparts@yahoo.com">olisautoparts@yahoo.com</a></li>
+          <li><strong>Phone</strong> <a href="tel:+18563042281">(856) 304-2281</a></li>
+        </ul>
+        <a class="btn btn-whatsapp" href="https://wa.me/18563042281" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.5 3.5A11.8 11.8 0 0 0 12 0C5.4 0 .1 5.3.1 11.9c0 2.1.5 4.1 1.6 5.9L0 24l6.3-1.6a11.9 11.9 0 0 0 5.7 1.5h.1c6.6 0 11.9-5.3 11.9-11.9 0-3.2-1.2-6.2-3.5-8.5zM12 21.5h-.1a9.6 9.6 0 0 1-4.9-1.4l-.4-.2-3.7 1 1-3.6-.2-.4a9.7 9.7 0 0 1-1.5-5.2C2.2 6.4 6.6 2 12 2a9.6 9.6 0 0 1 6.8 2.8 9.6 9.6 0 0 1 2.8 6.9c0 5.4-4.4 9.8-9.6 9.8z"/><path fill="currentColor" d="M17.4 14.2c-.3-.1-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.5-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.4.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1.1 2.8 1.2 3c.1.2 2.1 3.2 5.1 4.4.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.3.2-.7.2-1.2.2-1.3-.1-.2-.3-.3-.6-.4z"/></svg>
+          Message us on WhatsApp
+        </a>
+      </div>
+      <form class="contact-form" id="contactForm">
+        <label>Name <input type="text" name="name" required></label>
+        <label>Email <input type="email" name="email" required></label>
+        <label>Car make, model &amp; year <input type="text" name="car" placeholder="e.g. 2015 Toyota Camry"></label>
+        <label>Message <textarea name="message" rows="4" required></textarea></label>
+        <button type="submit" class="btn btn-primary" id="contactSubmit">Send message</button>
+        <p class="contact-status" id="contactStatus"></p>
+        <p class="form-note">Sends straight to olisautoparts@yahoo.com.</p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-row">
+    <span>&copy; <span id="year"></span> Olis Auto Parts</span>
+    <span>Nippon-spec piston rings · USA export · Delivery worldwide</span>
+  </div>
+</footer>
+
+<!-- Product detail modal -->
+<div class="modal-backdrop" id="modalBackdrop">
+  <div class="modal" id="productModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal-close" id="modalClose" aria-label="Close">&times;</button>
+    <div id="modalBody"></div>
+  </div>
+</div>
+
+<!-- Cart drawer -->
+<aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart">
+  <div class="cart-head">
+    <h2>Your cart</h2>
+    <button class="modal-close" id="cartClose" aria-label="Close cart">&times;</button>
+  </div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-foot">
+    <div class="cart-total-row"><span>Subtotal</span><strong id="cartSubtotal">$0.00</strong></div>
+    <p class="cart-currency-note" id="cartNgn"></p>
+    <button class="btn btn-primary btn-block" id="checkoutBtn">Checkout</button>
+    <p class="cart-note">Shipping calculated at checkout based on your destination.</p>
+  </div>
+</aside>
+<div class="drawer-backdrop" id="drawerBackdrop"></div>
+
+<!-- Admin sign-in modal -->
+<div class="modal-backdrop" id="adminLoginBackdrop">
+  <div class="modal admin-login-modal" role="dialog" aria-modal="true" aria-labelledby="adminLoginTitle">
+    <button class="modal-close" id="adminLoginClose" aria-label="Close">&times;</button>
+    <h3 id="adminLoginTitle">Owner sign in</h3>
+    <p class="form-note">For Oli's Auto Parts staff only.</p>
+    <form id="adminLoginForm">
+      <label>Password <input type="password" id="adminPassword" required></label>
+      <p class="contact-status error" id="adminLoginError"></p>
+      <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+    </form>
+  </div>
+</div>
+
+<!-- Admin dashboard -->
+<div class="admin-drawer-backdrop" id="adminDrawerBackdrop"></div>
+<aside class="admin-drawer" id="adminDrawer" aria-label="Owner dashboard">
+  <div class="cart-head">
+    <h2>Owner dashboard</h2>
+    <div style="display:flex; gap:10px; align-items:center;">
+      <button class="btn btn-ghost admin-signout" id="adminSignOut">Sign out</button>
+      <button class="modal-close" id="adminDrawerClose" aria-label="Close dashboard">&times;</button>
+    </div>
+  </div>
+  <div class="admin-body">
+    <p class="admin-note">Edits save to this browser only. Both of you need to edit from the same device/browser for changes to line up, since this site doesn't have a shared database yet.</p>
+    <div class="admin-table-wrap">
+      <table class="admin-table" id="adminTable"></table>
+    </div>
+  </div>
+</aside>
+
+<script>
+/* ---------- Product data ---------- */
+const PRODUCTS = [
+  // Nigerian-market fitments
+  { id:'ng-camry-07', market:'nigeria', make:'Toyota', model:'Camry', years:'2007–2011', engine:'2.4L 2AZ-FE I4', bore:'88.5 mm', cyl:4, price:52, stock:'in' },
+  { id:'ng-corolla-09', market:'nigeria', make:'Toyota', model:'Corolla', years:'2009–2013', engine:'1.8L 2ZR-FE I4', bore:'80.5 mm', cyl:4, price:46, stock:'in' },
+  { id:'ng-hilux-05', market:'nigeria', make:'Toyota', model:'Hilux', years:'2005–2015', engine:'2.5L 2KD-FTV I4 Diesel', bore:'92.0 mm', cyl:4, price:64, stock:'in' },
+  { id:'ng-accord-08', market:'nigeria', make:'Honda', model:'Accord', years:'2008–2012', engine:'2.4L K24Z3 I4', bore:'87.5 mm', cyl:4, price:54, stock:'low' },
+  { id:'ng-crv-07', market:'nigeria', make:'Honda', model:'CR-V', years:'2007–2011', engine:'2.4L K24Z1 I4', bore:'87.0 mm', cyl:4, price:53, stock:'in' },
+  { id:'ng-rx350-10', market:'nigeria', make:'Lexus', model:'RX 350', years:'2010–2015', engine:'3.5L 2GR-FE V6', bore:'94.0 mm', cyl:6, price:71, stock:'in' },
+  { id:'ng-cclass-08', market:'nigeria', make:'Mercedes-Benz', model:'C-Class', years:'2008–2014', engine:'1.8L M271 I4 Turbo', bore:'82.0 mm', cyl:4, price:58, stock:'low' },
+  { id:'ng-406-96', market:'nigeria', make:'Peugeot', model:'406', years:'1996–2004', engine:'2.0L EW10 I4', bore:'85.0 mm', cyl:4, price:49, stock:'in' },
+  { id:'ng-highlander-08', market:'nigeria', make:'Toyota', model:'Highlander', years:'2008–2013', engine:'2.7L 2AZ-FE I4', bore:'88.5 mm', cyl:4, price:55, stock:'in' },
+
+  // American-market fitments
+  { id:'us-f150-11', market:'american', make:'Ford', model:'F-150', years:'2011–2016', engine:'5.0L Coyote V8', bore:'92.2 mm', cyl:8, price:89, stock:'in' },
+  { id:'us-silverado-07', market:'american', make:'Chevrolet', model:'Silverado 1500', years:'2007–2013', engine:'5.3L Vortec V8', bore:'96.0 mm', cyl:8, price:92, stock:'in' },
+  { id:'us-camry-18', market:'american', make:'Toyota', model:'Camry', years:'2018–2023', engine:'2.5L A25A-FKS I4', bore:'87.5 mm', cyl:4, price:53, stock:'in' },
+  { id:'us-corolla-20', market:'american', make:'Toyota', model:'Corolla', years:'2020–2024', engine:'2.0L M20A-FKS I4', bore:'87.0 mm', cyl:4, price:50, stock:'in' },
+  { id:'us-civic-16', market:'american', make:'Honda', model:'Civic', years:'2016–2021', engine:'1.5L L15B7 Turbo I4', bore:'73.0 mm', cyl:4, price:48, stock:'low' },
+  { id:'us-accord-18', market:'american', make:'Honda', model:'Accord', years:'2018–2022', engine:'1.5L L15B7 Turbo I4', bore:'73.0 mm', cyl:4, price:48, stock:'in' },
+  { id:'us-grandcherokee-11', market:'american', make:'Jeep', model:'Grand Cherokee', years:'2011–2021', engine:'3.6L Pentastar V6', bore:'96.0 mm', cyl:6, price:73, stock:'in' },
+  { id:'us-mustang-15', market:'american', make:'Ford', model:'Mustang', years:'2015–2023', engine:'2.3L EcoBoost I4', bore:'87.5 mm', cyl:4, price:57, stock:'low' },
+  { id:'us-malibu-16', market:'american', make:'Chevrolet', model:'Malibu', years:'2016–2023', engine:'1.5L Turbo I4', bore:'73.0 mm', cyl:4, price:47, stock:'in' },
+];
+
+const REVIEWS = [
+  { name:'Emeka O. — Lagos, NG', stars:5, quote:'Ordered a set for my Hilux and it landed in under three weeks. Fit was exact, no shaving needed.' },
+  { name:'Tunde A. — Abuja, NG', stars:5, quote:'Been buying from taxi-fleet suppliers for years — this was the first time the compression rings actually matched spec.' },
+  { name:'Marcus D. — Dallas, TX', stars:5, quote:'Rebuilt my F-150\u2019s 5.0 with this set. Oil consumption dropped right away.' },
+  { name:'Chidinma N. — Port Harcourt, NG', stars:4, quote:'Good quality rings, shipping took a bit longer than the estimate but support kept me updated.' },
+  { name:'Sam R. — Columbus, OH', stars:5, quote:'Ring gap was exactly to spec on my Civic build. Will order again for the next project.' },
+];
+
+const NGN_RATE = 1580; // approximate USD -> NGN, fallback only if live rates fail
+let LIVE_RATES = null; // populated from exchange rate API, {code: rate}
+
+const COUNTRY_CURRENCY = {
+  'nigeria':'NGN','united states':'USD','usa':'USD','u.s.':'USD','united kingdom':'GBP','uk':'GBP',
+  'canada':'CAD','ghana':'GHS','kenya':'KES','south africa':'ZAR','egypt':'EGP','cameroon':'XAF',
+  'ivory coast':'XOF','cote d\'ivoire':'XOF','senegal':'XOF','ethiopia':'ETB','tanzania':'TZS',
+  'uganda':'UGX','rwanda':'RWF','morocco':'MAD','algeria':'DZD','tunisia':'TND','germany':'EUR',
+  'france':'EUR','spain':'EUR','italy':'EUR','netherlands':'EUR','ireland':'EUR','portugal':'EUR',
+  'india':'INR','china':'CNY','japan':'JPY','south korea':'KRW','australia':'AUD','new zealand':'NZD',
+  'brazil':'BRL','mexico':'MXN','argentina':'ARS','united arab emirates':'AED','uae':'AED',
+  'saudi arabia':'SAR','qatar':'QAR','turkey':'TRY','switzerland':'CHF','sweden':'SEK','norway':'NOK',
+  'denmark':'DKK','poland':'PLN','russia':'RUB','indonesia':'IDR','malaysia':'MYR','philippines':'PHP',
+  'thailand':'THB','vietnam':'VND','pakistan':'PKR','bangladesh':'BDT','israel':'ILS','jamaica':'JMD',
+  'trinidad and tobago':'TTD','singapore':'SGD','hong kong':'HKD','zambia':'ZMW','zimbabwe':'ZWL',
+  'sierra leone':'SLE','liberia':'LRD','benin':'XOF','togo':'XOF','mali':'XOF','niger':'XOF',
+};
+
+// Approximate fallback rates (USD -> currency), used when live rates aren't reachable.
+// These drift over time — live fetch is preferred when available.
+const FALLBACK_RATES = {
+  NGN:1580, GBP:0.78, CAD:1.36, GHS:15.2, KES:129, ZAR:17.8, EGP:48.5, XAF:605, XOF:605,
+  ETB:118, TZS:2650, UGX:3700, RWF:1400, MAD:9.9, DZD:134, TND:3.1, EUR:0.92, INR:83.5,
+  CNY:7.2, JPY:149, KRW:1330, AUD:1.52, NZD:1.65, BRL:5.3, MXN:18.2, ARS:945, AED:3.67,
+  SAR:3.75, QAR:3.64, TRY:33.8, CHF:0.88, SEK:10.5, NOK:10.7, DKK:6.9, PLN:4.0, RUB:92,
+  IDR:15650, MYR:4.7, PHP:56.5, THB:36.2, VND:24800, PKR:278, BDT:117, ILS:3.7, JMD:157,
+  TTD:6.8, SGD:1.35, HKD:7.8, ZMW:26.5, ZWL:322, SLE:22.7, LRD:190, USD:1,
+};
+
+async function getLiveRates(){
+  if(LIVE_RATES) return LIVE_RATES;
+  const cached = localStorage.getItem('oap_rates');
+  if(cached){
+    const parsed = JSON.parse(cached);
+    if(Date.now() - parsed.ts < 1000*60*60*6){ LIVE_RATES = parsed.rates; return LIVE_RATES; }
+  }
+  try{
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 4000);
+    const res = await fetch('https://open.er-api.com/v6/latest/USD', { signal: controller.signal });
+    clearTimeout(timeout);
+    const data = await res.json();
+    if(data && data.rates){
+      LIVE_RATES = data.rates;
+      localStorage.setItem('oap_rates', JSON.stringify({ts:Date.now(), rates:LIVE_RATES}));
+    }
+  }catch(err){
+    LIVE_RATES = null;
+  }
+  return LIVE_RATES;
+}
+const SHIPPING = {
+  us:  { cost: 12,  eta: '3–5 business days' },
+  ng:  { cost: 38,  eta: '10–18 business days' },
+  row: { cost: 45,  eta: '12–21 business days' },
+};
+
+/* ---------- State ---------- */
+let cart = JSON.parse(localStorage.getItem('oap_cart') || '{}'); // {productId: qty}
+
+function saveCart(){
+  localStorage.setItem('oap_cart', JSON.stringify(cart));
+  renderCartCount();
+  renderCartItems();
+}
+
+/* ---------- Rendering: product grids ---------- */
+function productCard(p){
+  const stockLabel = p.stock === 'in' ? 'In stock' : p.stock === 'low' ? 'Low stock' : 'Out of stock';
+  const stockClass = p.stock === 'in' ? 'stock-in' : p.stock === 'low' ? 'stock-low' : 'stock-out';
+  const ngn = (p.price * NGN_RATE).toLocaleString('en-NG', {maximumFractionDigits:0});
+  const disabled = p.stock === 'out';
+  return `
+    <article class="product-card" data-id="${p.id}" tabindex="0">
+      <div class="card-top">
+        <div>
+          <div class="card-make">${p.make}</div>
+          <div class="card-title">${p.model}</div>
+        </div>
+        <span class="stock-pill ${stockClass}">${stockLabel}</span>
+      </div>
+      <div class="card-specs">
+        <span>${p.engine}</span>
+        <span>Bore ${p.bore} · ${p.cyl}-cyl set</span>
+        <span>Fits ${p.years}</span>
+      </div>
+      <div class="card-bottom">
+        <div class="card-price">$${p.price.toFixed(2)}<span class="ngn">≈ ₦${ngn}</span></div>
+        <button class="mini-add" data-add="${p.id}" ${disabled ? 'disabled' : ''}>${disabled ? 'Out of stock' : 'Add to cart'}</button>
+      </div>
+    </article>`;
+}
+
+function renderGrid(market){
+  const grid = document.getElementById(`grid-${market}`);
+  const bar = document.querySelector(`.filter-bar[data-market="${market}"]`);
+  const search = bar.querySelector('.filter-search').value.trim().toLowerCase();
+  const make = bar.querySelector('[data-filter="make"]').value;
+  const year = bar.querySelector('[data-filter="year"]').value;
+
+  const items = PRODUCTS.filter(p => p.market === market).filter(p => {
+    const matchesSearch = !search || `${p.make} ${p.model}`.toLowerCase().includes(search);
+    const matchesMake = !make || p.make === make;
+    const matchesYear = !year || p.years.includes(year);
+    return matchesSearch && matchesMake && matchesYear;
+  });
+
+  grid.innerHTML = items.length
+    ? items.map(productCard).join('')
+    : `<p class="no-results">No fitments match those filters yet — try clearing search or contact us for your model.</p>`;
+}
+
+function populateFilters(market){
+  const bar = document.querySelector(`.filter-bar[data-market="${market}"]`);
+  const items = PRODUCTS.filter(p => p.market === market);
+  const makeSel = bar.querySelector('[data-filter="make"]');
+  const yearSel = bar.querySelector('[data-filter="year"]');
+
+  [...new Set(items.map(p => p.make))].sort().forEach(m => {
+    const opt = document.createElement('option'); opt.value = m; opt.textContent = m;
+    makeSel.appendChild(opt);
+  });
+  const years = new Set();
+  items.forEach(p => p.years.split('–').forEach(y => years.add(y.trim())));
+  [...years].sort().forEach(y => {
+    const opt = document.createElement('option'); opt.value = y; opt.textContent = y;
+    yearSel.appendChild(opt);
+  });
+
+  bar.querySelectorAll('input,select').forEach(el => el.addEventListener('input', () => renderGrid(market)));
+}
+
+/* ---------- Product modal ---------- */
+function openModal(id){
+  const p = PRODUCTS.find(x => x.id === id);
+  if(!p) return;
+  const ngn = (p.price * NGN_RATE).toLocaleString('en-NG', {maximumFractionDigits:0});
+  document.getElementById('modalBody').innerHTML = `
+    <div class="modal-make">${p.make} · ${p.market === 'nigeria' ? 'Nigerian-market fitment' : 'American-market fitment'}</div>
+    <h3 id="modalTitle">${p.model} — Piston Ring Set</h3>
+    <div class="modal-price">$${p.price.toFixed(2)} <span style="font-family:var(--font-mono); font-size:0.85rem; color:#8a7d6d;">≈ ₦${ngn}</span></div>
+    <table class="spec-table">
+      <tr><td>Fits years</td><td>${p.years}</td></tr>
+      <tr><td>Engine</td><td>${p.engine}</td></tr>
+      <tr><td>Bore diameter</td><td>${p.bore}</td></tr>
+      <tr><td>Cylinders</td><td>${p.cyl}</td></tr>
+      <tr><td>Set includes</td><td>Top &amp; 2nd compression ring, oil control ring — per cylinder</td></tr>
+      <tr><td>Availability</td><td>${p.stock === 'in' ? 'In stock' : 'Low stock — limited units'}</td></tr>
+    </table>
+    <p class="fitment-note">Fitment shown is by engine code and bore diameter. Confirm your exact engine code before ordering — <a href="#contact" id="modalContactLink">send us your VIN or engine code</a> and we'll double check.</p>
+    <button class="btn btn-primary btn-block" data-add="${p.id}">Add to cart — $${p.price.toFixed(2)}</button>
+  `;
+  document.getElementById('modalBackdrop').classList.add('open');
+}
+function closeModal(){ document.getElementById('modalBackdrop').classList.remove('open'); }
+
+/* ---------- Cart ---------- */
+function addToCart(id){
+  cart[id] = (cart[id] || 0) + 1;
+  saveCart();
+  openCart();
+}
+function changeQty(id, delta){
+  if(!cart[id]) return;
+  cart[id] += delta;
+  if(cart[id] <= 0) delete cart[id];
+  saveCart();
+}
+function removeFromCart(id){
+  delete cart[id];
+  saveCart();
+}
+function cartCount(){
+  return Object.values(cart).reduce((a,b) => a+b, 0);
+}
+function cartSubtotal(){
+  return Object.entries(cart).reduce((sum,[id,qty]) => {
+    const p = PRODUCTS.find(x => x.id === id);
+    return sum + (p ? p.price * qty : 0);
+  }, 0);
+}
+function renderCartCount(){
+  document.getElementById('cartCount').textContent = cartCount();
+}
+function renderCartItems(){
+  const wrap = document.getElementById('cartItems');
+  const ids = Object.keys(cart);
+  if(!ids.length){
+    wrap.innerHTML = `<p class="cart-empty">Your cart is empty.<br>Browse fitments to add piston ring sets.</p>`;
+  } else {
+    wrap.innerHTML = ids.map(id => {
+      const p = PRODUCTS.find(x => x.id === id);
+      if(!p) return '';
+      const qty = cart[id];
+      return `
+        <div class="cart-item" data-id="${id}">
+          <div style="flex:1;">
+            <div class="cart-item-title">${p.make} ${p.model}</div>
+            <div class="cart-item-sub">${p.engine}</div>
+            <div class="qty-row">
+              <button class="qty-btn" data-qty-down="${id}">−</button>
+              <span>${qty}</span>
+              <button class="qty-btn" data-qty-up="${id}">+</button>
+              <button class="remove-btn" data-remove="${id}">Remove</button>
+            </div>
+          </div>
+          <div class="cart-item-price">$${(p.price*qty).toFixed(2)}</div>
+        </div>`;
+    }).join('');
+  }
+  const subtotal = cartSubtotal();
+  document.getElementById('cartSubtotal').textContent = `$${subtotal.toFixed(2)}`;
+  document.getElementById('cartNgn').textContent = subtotal > 0
+    ? `≈ ₦${(subtotal*NGN_RATE).toLocaleString('en-NG',{maximumFractionDigits:0})} · shipping added at checkout`
+    : '';
+}
+
+function openCart(){
+  document.getElementById('cartDrawer').classList.add('open');
+  document.getElementById('drawerBackdrop').classList.add('open');
+}
+function closeCart(){
+  document.getElementById('cartDrawer').classList.remove('open');
+  document.getElementById('drawerBackdrop').classList.remove('open');
+}
+
+/* ---------- Shipping calculator ---------- */
+function renderShipping(){
+  const country = document.getElementById('shipCountry').value;
+  const info = SHIPPING[country];
+  document.getElementById('shippingResult').innerHTML = `
+    <div class="ship-cost">$${info.cost.toFixed(2)}</div>
+    <div class="ship-eta">Estimated delivery: ${info.eta}</div>
+  `;
+}
+
+/* ---------- Currency converter ---------- */
+async function runConversion(){
+  const countryInput = document.getElementById('convCountry').value.trim().toLowerCase();
+  const amountInput = parseFloat(document.getElementById('convAmount').value) || 0;
+  const resultEl = document.getElementById('convResult');
+
+  const code = COUNTRY_CURRENCY[countryInput];
+  if(!code){
+    resultEl.innerHTML = `<span class="conv-error">Don't recognize that country yet — try the full name (e.g. "Nigeria", "United Kingdom"), or the code directly (e.g. "NGN").</span>`;
+    return;
+  }
+  resultEl.innerHTML = `<span class="conv-loading">Converting…</span>`;
+  const rates = await getLiveRates();
+
+  if(rates && rates[code]){
+    const converted = amountInput * rates[code];
+    resultEl.innerHTML = `<span class="conv-amount">${converted.toLocaleString(undefined,{maximumFractionDigits:2})} ${code}</span><span class="conv-sub">$${amountInput.toFixed(2)} USD · live rate</span>`;
+  } else if(FALLBACK_RATES[code]){
+    const converted = amountInput * FALLBACK_RATES[code];
+    resultEl.innerHTML = `<span class="conv-amount">${converted.toLocaleString(undefined,{maximumFractionDigits:2})} ${code}</span><span class="conv-sub">$${amountInput.toFixed(2)} USD · approximate rate</span>`;
+  } else {
+    resultEl.innerHTML = `<span class="conv-error">Don't have a rate for ${code} yet — try another country.</span>`;
+  }
+}
+
+function setupConverter(){
+  document.getElementById('convGo').addEventListener('click', runConversion);
+  document.getElementById('convCountry').addEventListener('keydown', (e) => { if(e.key === 'Enter') runConversion(); });
+}
+
+/* ---------- Reviews ---------- */
+function renderReviews(){
+  document.getElementById('reviewsGrid').innerHTML = REVIEWS.map(r => `
+    <div class="review-card">
+      <div class="review-stars">${'★'.repeat(r.stars)}${'☆'.repeat(5-r.stars)}</div>
+      <p class="review-quote">${r.quote}</p>
+      <div class="review-name">${r.name}</div>
+    </div>
+  `).join('');
+}
+
+/* ---------- Contact form ---------- */
+function setupContactForm(){
+  const form = document.getElementById('contactForm');
+  const statusEl = document.getElementById('contactStatus');
+  const submitBtn = document.getElementById('contactSubmit');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const f = e.target;
+    const name = f.name.value, email = f.email.value, car = f.car.value, message = f.message.value;
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending…';
+    statusEl.textContent = '';
+    statusEl.className = 'contact-status';
+
+    try{
+      const res = await fetch('https://formsubmit.co/ajax/olisautoparts@yahoo.com', {
+        method: 'POST',
+        headers: { 'Content-Type':'application/json', 'Accept':'application/json' },
+        body: JSON.stringify({
+          name, email, car,
+          message,
+          _subject: `Fitment inquiry from ${name}${car ? ' — ' + car : ''}`
+        })
+      });
+      if(res.ok){
+        statusEl.textContent = 'Sent! We\u2019ll get back to you at ' + email + '.';
+        statusEl.className = 'contact-status sent';
+        form.reset();
+      } else {
+        throw new Error('Send failed');
+      }
+    } catch(err){
+      statusEl.innerHTML = `Couldn't send automatically — <a href="mailto:olisautoparts@yahoo.com?subject=${encodeURIComponent('Fitment inquiry from ' + name)}&body=${encodeURIComponent(message + '\n\nCar: ' + car + '\nReply to: ' + email)}">email us directly instead</a>.`;
+      statusEl.className = 'contact-status error';
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Send message';
+    }
+  });
+}
+
+/* ---------- Checkout (placeholder pending real payment processor) ---------- */
+function setupCheckout(){
+  document.getElementById('checkoutBtn').addEventListener('click', () => {
+    if(!cartCount()){ return; }
+    const country = document.getElementById('shipCountry').value;
+    const shipping = SHIPPING[country].cost;
+    const total = cartSubtotal() + shipping;
+    alert(
+      `Order summary\n\n` +
+      `Items: $${cartSubtotal().toFixed(2)}\n` +
+      `Shipping (${country.toUpperCase()}): $${shipping.toFixed(2)}\n` +
+      `Total: $${total.toFixed(2)}\n\n` +
+      `Card payment isn't wired up yet — this is a preview checkout. ` +
+      `Real Stripe/Paystack payment processing gets connected next.`
+    );
+  });
+}
+
+/* ---------- Nav & misc ---------- */
+function setupNav(){
+  const toggle = document.getElementById('navToggle');
+  const nav = document.getElementById('mainNav');
+  toggle.addEventListener('click', () => nav.classList.toggle('open'));
+  nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => nav.classList.remove('open')));
+}
+
+/* ---------- Event delegation ---------- */
+function setupDelegatedEvents(){
+  document.body.addEventListener('click', (e) => {
+    const addId = e.target.getAttribute('data-add');
+    if(addId){ addToCart(addId); return; }
+
+    const qtyUp = e.target.getAttribute('data-qty-up');
+    if(qtyUp){ changeQty(qtyUp, 1); return; }
+
+    const qtyDown = e.target.getAttribute('data-qty-down');
+    if(qtyDown){ changeQty(qtyDown, -1); return; }
+
+    const removeId = e.target.getAttribute('data-remove');
+    if(removeId){ removeFromCart(removeId); return; }
+
+    const card = e.target.closest('.product-card');
+    if(card && !e.target.closest('button')){ openModal(card.dataset.id); return; }
+  });
+
+  document.body.addEventListener('keydown', (e) => {
+    if(e.key === 'Enter'){
+      const card = e.target.closest('.product-card');
+      if(card){ openModal(card.dataset.id); }
+    }
+  });
+}
+
+/* ---------- Admin: local overrides ---------- */
+const ADMIN_PASSWORD = 'OlisFamily2026'; // change this in the code — visible to anyone who views source
+
+function applyOverrides(){
+  const overrides = JSON.parse(localStorage.getItem('oap_overrides') || '{}');
+  PRODUCTS.forEach(p => {
+    if(overrides[p.id]){
+      if(overrides[p.id].price !== undefined) p.price = overrides[p.id].price;
+      if(overrides[p.id].stock !== undefined) p.stock = overrides[p.id].stock;
+    }
+  });
+}
+
+function saveOverrides(){
+  const overrides = {};
+  PRODUCTS.forEach(p => { overrides[p.id] = { price: p.price, stock: p.stock }; });
+  localStorage.setItem('oap_overrides', JSON.stringify(overrides));
+}
+
+function isAdmin(){
+  return sessionStorage.getItem('oap_admin') === 'yes';
+}
+
+function openAdminLogin(){
+  document.getElementById('adminLoginBackdrop').classList.add('open');
+  document.getElementById('adminLoginError').textContent = '';
+}
+function closeAdminLogin(){
+  document.getElementById('adminLoginBackdrop').classList.remove('open');
+}
+
+function openAdminDrawer(){
+  renderAdminTable();
+  document.getElementById('adminDrawer').classList.add('open');
+  document.getElementById('adminDrawerBackdrop').classList.add('open');
+}
+function closeAdminDrawer(){
+  document.getElementById('adminDrawer').classList.remove('open');
+  document.getElementById('adminDrawerBackdrop').classList.remove('open');
+}
+
+function renderAdminTable(){
+  const table = document.getElementById('adminTable');
+  table.innerHTML = `
+    <tr><th>Fitment</th><th>Price (USD)</th><th>Stock</th></tr>
+    ${PRODUCTS.map(p => `
+      <tr data-id="${p.id}">
+        <td><div class="admin-model">${p.model}</div><div class="admin-make">${p.make} · ${p.years}</div></td>
+        <td><input type="number" step="0.01" min="0" class="admin-price" value="${p.price}"></td>
+        <td>
+          <select class="admin-stock">
+            <option value="in" ${p.stock === 'in' ? 'selected' : ''}>In stock</option>
+            <option value="low" ${p.stock === 'low' ? 'selected' : ''}>Low stock</option>
+            <option value="out" ${p.stock === 'out' ? 'selected' : ''}>Out of stock</option>
+          </select>
+        </td>
+      </tr>`).join('')}
+    <tr><td colspan="3" style="padding-top:16px;">
+      <button class="btn btn-primary" id="adminSaveBtn">Save changes</button>
+      <div class="admin-saved-msg" id="adminSavedMsg"></div>
+    </td></tr>
+  `;
+  document.getElementById('adminSaveBtn').addEventListener('click', () => {
+    table.querySelectorAll('tr[data-id]').forEach(row => {
+      const id = row.dataset.id;
+      const p = PRODUCTS.find(x => x.id === id);
+      if(!p) return;
+      const price = parseFloat(row.querySelector('.admin-price').value);
+      const stock = row.querySelector('.admin-stock').value;
+      if(!isNaN(price)) p.price = price;
+      p.stock = stock;
+    });
+    saveOverrides();
+    renderGrid('nigeria');
+    renderGrid('american');
+    document.getElementById('adminSavedMsg').textContent = 'Saved — changes are live on this browser.';
+  });
+}
+
+function setupAdmin(){
+  document.getElementById('adminToggle').addEventListener('click', () => {
+    if(isAdmin()) openAdminDrawer(); else openAdminLogin();
+  });
+  document.getElementById('adminLoginClose').addEventListener('click', closeAdminLogin);
+  document.getElementById('adminLoginBackdrop').addEventListener('click', (e) => {
+    if(e.target.id === 'adminLoginBackdrop') closeAdminLogin();
+  });
+  document.getElementById('adminLoginForm').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const val = document.getElementById('adminPassword').value;
+    if(val === ADMIN_PASSWORD){
+      sessionStorage.setItem('oap_admin', 'yes');
+      closeAdminLogin();
+      document.getElementById('adminPassword').value = '';
+      openAdminDrawer();
+    } else {
+      document.getElementById('adminLoginError').textContent = 'Wrong password — try again.';
+    }
+  });
+  document.getElementById('adminDrawerClose').addEventListener('click', closeAdminDrawer);
+  document.getElementById('adminDrawerBackdrop').addEventListener('click', closeAdminDrawer);
+  document.getElementById('adminSignOut').addEventListener('click', () => {
+    sessionStorage.removeItem('oap_admin');
+    closeAdminDrawer();
+  });
+}
+
+/* ---------- Init ---------- */
+document.addEventListener('DOMContentLoaded', () => {
+  applyOverrides();
+  document.getElementById('year').textContent = new Date().getFullYear();
+  document.getElementById('statFitments').textContent = PRODUCTS.length;
+
+  populateFilters('nigeria');
+  populateFilters('american');
+  renderGrid('nigeria');
+  renderGrid('american');
+  renderReviews();
+  renderShipping();
+  renderCartCount();
+  renderCartItems();
+
+  document.getElementById('shipCountry').addEventListener('change', renderShipping);
+  document.getElementById('cartToggle').addEventListener('click', openCart);
+  document.getElementById('cartClose').addEventListener('click', closeCart);
+  document.getElementById('drawerBackdrop').addEventListener('click', closeCart);
+  document.getElementById('modalClose').addEventListener('click', closeModal);
+  document.getElementById('modalBackdrop').addEventListener('click', (e) => {
+    if(e.target.id === 'modalBackdrop') closeModal();
+  });
+
+  setupNav();
+  setupContactForm();
+  setupConverter();
+  setupCheckout();
+  setupDelegatedEvents();
+  setupAdmin();
+});
+
+</script>
+</body>
+</html>
